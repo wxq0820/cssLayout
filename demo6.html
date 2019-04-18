@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片水平垂直居中</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        div{
+            margin: 30px auto;
+            width: 1000px;
+            height: 1000px;
+            background-color: pink;
+        }
+        img{
+            vertical-align: middle;
+        }
+        .box::before{
+            content: "";
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <img src="./image/pic.jpeg" alt="">
+</div>
+</body>
+</html>

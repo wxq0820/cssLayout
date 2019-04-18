@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>两栏布局，右侧自适应</title>
+    <style>
+        .aside{
+            width: 200px;
+            height: 500px;
+            background-color: orange;
+            float: left;
+        }
+        .content{
+            margin-left: 410px;
+            height:600px;
+            background-color: aqua;
+        }
+        .clearFix::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<div class="main clearFix">
+    <div class="aside"></div>
+    <div class="content"></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>左右固定宽度，中间自适应</title>
+    <style>
+        .aside-left{
+            width: 200px;
+            height: 500px;
+            background-color: orange;
+            float: left;
+        }
+        .aside-right{
+            width: 200px;
+            height: 500px;
+            background-color: pink;
+            float: right;
+        }
+        .content{
+            margin:0 210px;
+            height:600px;
+            background-color: aqua;
+        }
+        .clearFix::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<div class="main clearFix">
+    <div class="aside-left"></div>
+    <div class="aside-right"></div>
+    <div class="content"></div>
+</div>
+</body>
+</html>

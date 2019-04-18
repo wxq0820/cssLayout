@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>并列三个按钮，在父容器内水平居中</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        div{
+            margin: 30px auto;
+            width: 400px;
+            height: 200px;
+            background-color: pink;
+        }
+        ul{
+            list-style: none;
+            vertical-align: middle;
+            display: inline-block;
+        }
+        li{
+            display: inline-block;
+        }
+        button{
+            background-color: orange;
+            border: none;
+            border-radius: 3px;
+            font-size: 18px;
+            line-height: 50px;
+            margin: 0 5px;
+            padding: 0 10px;
+        }
+        .box::before{
+            content: "";
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <ul>
+        <li>
+            <button>button1</button>
+        </li>
+        <li>
+            <button>button2</button>
+        </li>
+        <li>
+            <button>button3</button>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

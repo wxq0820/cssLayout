@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用伪元素实现三角符号</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .div1,
+        .div2,
+        .div3 {
+            position: relative;
+            display: inline-block;
+            margin: 100px;
+            width: 100px;
+            height: 40px;
+            background: #ccc;
+            border: 1px solid #ccc;
+        }
+        .div1::before {
+            position: absolute;
+            top: -5px;
+            left: 10px;
+            display: inline-block;
+            width: 0;
+            height: 0;
+            content: "";
+            border-top: 5px solid red;
+            border-left: 5px solid red;
+            border-bottom: 5px solid rgba(0,0,0,0);
+            border-right: 5px solid rgba(0,0,0,0);
+            transform: rotateZ(45deg);
+        }
+        .div2::before {
+            position: absolute;
+            top: 0;
+            left: 90px;
+            display: inline-block;
+            width: 0;
+            height: 0;
+            content: "";
+            border-top: 5px solid red;
+            border-left: 5px solid rgba(0,0,0,0);
+            border-bottom: 5px solid rgba(0,0,0,0);
+            border-right: 5px solid red;
+        }
+        .div3::before {
+            position: absolute;
+            top: -5px;
+            left: 10px;
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            content: "";
+            border-top: 1px solid #ccc;
+            border-left: 1px solid #ccc;
+            background: #ccc;
+            transform: rotateZ(45deg);
+        }
+    </style>
+</head>
+<body>
+<div class="div1"></div>
+<div class="div2"></div>
+<div class="div3"></div>
+</body>
+</html>
